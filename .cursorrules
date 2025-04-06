@@ -1,0 +1,20 @@
+{
+  "commitConvention": {
+    "type": "conventional",
+    "types": [
+      "feat",
+      "fix",
+      "docs",
+      "style",
+      "refactor",
+      "test",
+      "chore"
+    ],
+    "description": "This project follows the Conventional Commits specification. All commit messages must follow the format: <type>: <description>"
+  },
+  "projectRules": {
+    "reactVersion": "17",
+    "buildTool": "rsbuild",
+    "language": "typescript"
+  }
+} 
