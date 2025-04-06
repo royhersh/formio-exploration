@@ -10,7 +10,21 @@
       "test",
       "chore"
     ],
-    "description": "This project follows the Conventional Commits specification. All commit messages must follow the format: <type>: <description>"
+    "description": "This project follows the Conventional Commits specification. All commit messages must follow the format: <type>: <description>",
+    "rules": {
+      "packageFiles": {
+        "includeBoth": ["package.json", "package-lock.json"],
+        "description": "When adding new dependencies, always include both package.json and package-lock.json in the same commit"
+      },
+      "statusCheck": {
+        "required": true,
+        "description": "Always check git status before committing to ensure all related files are included"
+      },
+      "relatedChanges": {
+        "packageWithFeature": true,
+        "description": "Package-related changes should be committed together with their corresponding feature/fix changes"
+      }
+    }
   },
   "projectRules": {
     "reactVersion": "17",
