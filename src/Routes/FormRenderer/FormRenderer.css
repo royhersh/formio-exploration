@@ -1,0 +1,168 @@
+.test2 {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.test2 h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.test2 p {
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.test2__links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.test2__link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.test2__link:hover {
+  background-color: #0056b3;
+}
+
+.form-renderer-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.form-renderer-container h1 {
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 400;
+}
+
+.form-renderer-wrapper {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin: 20px 0;
+  padding: 20px;
+}
+
+.form-renderer-actions {
+  margin: 20px 0;
+  display: flex;
+  gap: 10px;
+}
+
+.form-renderer-actions button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.form-renderer-actions button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.form-data-preview {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
+.form-data-preview h3 {
+  margin-bottom: 15px;
+  color: #333;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.form-data-preview pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.alert {
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+/* Form.io specific overrides */
+.formio-form {
+  margin: 0;
+}
+
+.formio-component {
+  margin-bottom: 1.5rem;
+}
+
+.formio-component label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.formio-component .form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.formio-component .form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.btn-secondary {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+  color: #fff;
+  background-color: #5a6268;
+  border-color: #545b62;
+} 

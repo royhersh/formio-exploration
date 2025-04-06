@@ -11,8 +11,8 @@ const Home: React.FC = () => {
         <Link to="/form-builder" className="home__link">
           Go to Form Builder
         </Link>
-        <Link to="/test2" className="home__link">
-          Go to Test2
+        <Link to="/form-renderer" className="home__link">
+          Go to Form Renderer
         </Link>
       </div>
     </div>

@@ -4,4 +4,45 @@
   padding: 20px;
 }
 
-/* Add any global styles here */ 
+/* Add any global styles here */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app__nav {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+  padding: 1rem;
+}
+
+.app__nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.app__nav-link {
+  text-decoration: none;
+  color: #495057;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.app__nav-link:hover {
+  color: #228be6;
+  background-color: #e9ecef;
+}
+
+/* Active link styles - will work with React Router */
+.app__nav-link.active {
+  color: #228be6;
+  background-color: #e7f5ff;
+} 
