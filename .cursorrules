@@ -16,5 +16,28 @@
     "reactVersion": "17",
     "buildTool": "rsbuild",
     "language": "typescript"
+  },
+  "componentStructure": {
+    "pattern": "src/ComponentName/",
+    "files": [
+      "ComponentName.tsx",
+      "ComponentName.css",
+      "ComponentName.stories.tsx"
+    ],
+    "description": "Each component should have its own directory containing the component file, styles, and stories"
+  },
+  "storybook": {
+    "componentStories": {
+      "titlePrefix": "Components",
+      "defaultLayout": "centered",
+      "includeAutodocs": true
+    },
+    "controls": {
+      "enabled": true,
+      "matchers": {
+        "color": "/background|color/i",
+        "date": "/Date$/"
+      }
+    }
   }
 } 
