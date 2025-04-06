@@ -32,7 +32,7 @@
     "language": "typescript"
   },
   "componentStructure": {
-    "pattern": "src/ComponentName/",
+    "pattern": "src/Components/ComponentName/",
     "files": [
       "ComponentName.tsx",
       "ComponentName.css",
