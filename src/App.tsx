@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Home from './Routes/Home/Home';
-import Test1 from './Routes/Test1/Test1';
+import FormBuilder from './Routes/FormBuilder/FormBuilder';
 import Test2 from './Routes/Test2/Test2';
 
 // Import your components here
@@ -15,7 +15,7 @@ const App: React.FC = () => {
       <div className="App">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/test1" element={<Test1 />} />
+          <Route path="/form-builder" element={<FormBuilder />} />
           <Route path="/test2" element={<Test2 />} />
           <Route path="*" element={<div>404 - Page Not Found</div>} />
         </Routes>

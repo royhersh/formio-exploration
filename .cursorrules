@@ -23,6 +23,10 @@
       "relatedChanges": {
         "packageWithFeature": true,
         "description": "Package-related changes should be committed together with their corresponding feature/fix changes"
+      },
+      "emptyFolders": {
+        "deleteWhenEmpty": true,
+        "description": "When deleting files, always delete their parent folders if they become empty"
       }
     }
   },

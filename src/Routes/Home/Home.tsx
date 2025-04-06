@@ -8,8 +8,8 @@ const Home: React.FC = () => {
       <h1>Welcome to Formio Exploration</h1>
       <p>This is the home page of your application.</p>
       <div className="home__links">
-        <Link to="/test1" className="home__link">
-          Go to Test1
+        <Link to="/form-builder" className="home__link">
+          Go to Form Builder
         </Link>
         <Link to="/test2" className="home__link">
           Go to Test2
