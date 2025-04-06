@@ -6,4 +6,4 @@ export default defineConfig({
   html: {
     template: './src/index.html',
   },
-}); 
+});
