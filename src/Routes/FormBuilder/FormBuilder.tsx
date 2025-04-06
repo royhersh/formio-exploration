@@ -5,6 +5,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import '@formio/js/dist/formio.full.min.css';
 import './FormBuilder.css';
+// Import our custom Kanye component
+import KanyeFormio from '../../Components/Kanye/KanyeFormio';
+
+// Register the custom component
+Formio.use({
+  components: {
+    kanyequote: KanyeFormio,
+  },
+});
 
 interface FormComponent {
   type: string;
@@ -82,6 +91,7 @@ const FormBuilder: React.FC = () => {
               select: true,
               radio: true,
               button: true,
+              kanyequote: true,
             },
           },
           advanced: {
