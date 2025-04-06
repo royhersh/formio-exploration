@@ -1,0 +1,37 @@
+.test1 {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.test1 h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.test1 p {
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.test1__links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.test1__link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.test1__link:hover {
+  background-color: #0056b3;
+} 

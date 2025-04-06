@@ -40,6 +40,14 @@
     ],
     "description": "Each component should have its own directory containing the component file, styles, and stories"
   },
+  "routeStructure": {
+    "pattern": "src/Routes/RouteName/",
+    "files": [
+      "RouteName.tsx",
+      "RouteName.css"
+    ],
+    "description": "Each route should be placed in the Routes directory with its own folder containing the component and styles"
+  },
   "storybook": {
     "componentStories": {
       "titlePrefix": "Components",
