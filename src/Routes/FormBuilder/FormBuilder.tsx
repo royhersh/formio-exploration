@@ -15,6 +15,9 @@ Formio.use({
   },
 });
 
+// Constants
+const FORM_SCHEMA_KEY = 'formio_builder_schema';
+
 interface FormComponent {
   type: string;
   key?: string;
@@ -44,26 +47,61 @@ interface BuilderInstance {
 
 const FormBuilder: React.FC = () => {
   const builderRef = useRef<HTMLDivElement>(null);
-  const [schema, setSchema] = useState<FormSchema>({
-    components: [],
-    display: 'form',
-    settings: {
-      pdf: {
-        id: '',
-        src: '',
-      },
-    },
+  const [schema, setSchema] = useState<FormSchema>(() => {
+    // Try to load initial schema from localStorage
+    const savedSchema = localStorage.getItem(FORM_SCHEMA_KEY);
+    return savedSchema
+      ? JSON.parse(savedSchema)
+      : {
+          components: [],
+          display: 'form',
+          settings: {
+            pdf: {
+              id: '',
+              src: '',
+            },
+          },
+        };
   });
+
+  const handleSaveSchema = () => {
+    try {
+      localStorage.setItem(FORM_SCHEMA_KEY, JSON.stringify(schema));
+      alert('Form schema saved successfully!');
+    } catch (error) {
+      console.error('Error saving form schema:', error);
+      alert('Failed to save form schema');
+    }
+  };
+
+  const handleClearSchema = () => {
+    if (window.confirm('Are you sure you want to clear the saved form schema?')) {
+      try {
+        localStorage.removeItem(FORM_SCHEMA_KEY);
+        setSchema({
+          components: [],
+          display: 'form',
+          settings: {
+            pdf: {
+              id: '',
+              src: '',
+            },
+          },
+        });
+        alert('Form schema cleared successfully!');
+      } catch (error) {
+        console.error('Error clearing form schema:', error);
+        alert('Failed to clear form schema');
+      }
+    }
+  };
 
   useEffect(() => {
     let builder: BuilderInstance | null = null;
 
     if (builderRef.current) {
       // Initial form schema
-      const initialSchema = {
-        display: 'form',
-        components: [],
-      };
+      const initialSchema = schema; // Use the schema from state
 
       // Builder options
       const options = {
@@ -169,6 +207,16 @@ const FormBuilder: React.FC = () => {
   return (
     <div className="form-builder-container">
       <h1>Form Builder</h1>
+      <div className="form-builder-actions">
+        <button className="btn btn-primary me-2" onClick={handleSaveSchema}>
+          <i className="bi bi-save me-1"></i>
+          Save Form Schema
+        </button>
+        <button className="btn btn-danger" onClick={handleClearSchema}>
+          <i className="bi bi-trash me-1"></i>
+          Clear Saved Schema
+        </button>
+      </div>
       <div className="form-builder-wrapper">
         <div ref={builderRef} className="formio-builder" />
       </div>
