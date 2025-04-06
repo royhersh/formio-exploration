@@ -1,0 +1,37 @@
+.kanye-quote {
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.quote-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.quote-text {
+  font-weight: bold;
+  margin: 0;
+  flex: 1;
+}
+
+.refresh-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.refresh-button:hover {
+  transform: rotate(180deg);
+}
+
+.refresh-button i {
+  font-size: 1.2rem;
+} 
